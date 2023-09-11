@@ -6,7 +6,7 @@ const subscriberSchema = new mongoose.Schema({
         required: true
     },
     subscriberToChannel: {
-        type: String,
+        type: Boolean,
         required: true
     },
     subscribeDate: {
@@ -15,3 +15,5 @@ const subscriberSchema = new mongoose.Schema({
         default: Date.now()
     }
 })
+
+module.exports = mongoose.model('Subscriber', subscriberSchema);
